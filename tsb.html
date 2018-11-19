@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/vue.js"></script>
+	<body>
+		
+		<div id="box">
+			<input type="number" v-model="width" />
+			<input type="number" v-model="height" />
+			<input type="color" v-model="bg" />
+			<!--<input type="range" min="0" max="255" v-model="r" />
+			<input type="range" min="0" max="255" v-model="g" />
+			<input type="range" min="0" max="255" v-model="b" />
+			<div class="color" v-bind:style="{width:width+'px',height:height+'px',
+					background:'rgb('+r+','+g+','+b+')'}">sss</div>-->
+		<div class="color" v-bind:style="{width:width+'px',height:height+'px',background:bg}"></div>
+		</div>
+			
+			
+	</body>
+</html>
+<script>
+	var vm=new Vue({
+		el:"#box",
+		data:{
+			width:200,
+			height:200,
+			/*r:0,
+			g:0,
+			b:0*/
+			bg:"#ccc"
+		}
+		
+	})
+</script>
